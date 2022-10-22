@@ -1,0 +1,7 @@
+_target_: src.datamodules.blood_cells_datamodule.BloodCellsDataModule
+train_data_dir:  ${paths.root_dir}/data/train_cells
+valid_data_dir:  ${paths.root_dir}/data/valid_cells
+test_data_dir:  ${paths.root_dir}/data/test_cells
+batch_size: 16
+num_workers: 8
+pin_memory: False
