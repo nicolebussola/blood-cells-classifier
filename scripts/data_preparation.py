@@ -9,6 +9,7 @@ import tqdm
 
 ROOT_DIR = os.path.dirname(Path(__file__).parent.parent.absolute())
 DATA_DIR = os.path.join(ROOT_DIR, "data")
+os.makedirs(DATA_DIR, exist_ok=False)
 
 
 def crop_and_write_cells(src_path, label, img_list, df_cells):
