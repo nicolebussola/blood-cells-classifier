@@ -97,6 +97,7 @@ jobs:
           pip install pytest
           pip install pytest-cov[toml]
           pip install sh
+          pip install -e .
 
       - name: Run tests and collect coverage
         run: pytest --cov src # NEEDS TO BE UPDATED WHEN CHANGING THE NAME OF "src" FOLDER
