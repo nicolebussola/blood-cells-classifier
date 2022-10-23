@@ -2,15 +2,15 @@
 
 wandb:
   _target_: pytorch_lightning.loggers.wandb.WandbLogger
-  name: "train-mps"
+  name: "train-mps-${now:%Y-%m-%d}_${now:%H-%M-%S}"
   save_dir: "${paths.output_dir}"
   offline: False
   id: null
   anonymous: null
   project: "cell-classification"
   log_model: False
-  prefix: "" # a string to put at the beginning of metric keys
-  entity: "bussolacompass" # set to name of your wandb team
+  prefix: ""
+  entity: "bussolacompass"
   group: ""
   tags: []
   job_type: ""
