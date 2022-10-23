@@ -7,7 +7,7 @@ defaults:
   - datamodule: blood_cells.yaml
   - model: blood_cells.yaml
   - callbacks: default.yaml
-  - logger: csv_wandb.yaml # set logger here or use command line (e.g. `python train.py logger=tensorboard`)
+  - logger: csv.yaml # set logger here or use command line (e.g. `python train.py logger=tensorboard`)
   - trainer: default.yaml
   - paths: default.yaml
   - extras: default.yaml
@@ -17,8 +17,8 @@ defaults:
   # e.g. best hyperparameters for given model and datamodule
   - experiment: cell_classification.yaml
 
-  # config for hyperparameter optimization - blood_cells_optuna.yaml
-  - hparams_search: blood_cells_optuna.yaml
+  # config for hyperparameter optimization
+  - hparams_search: null
 
   # optional local config for machine/user specific settings
   # it's optional since it doesn't need to exist and is excluded from version control
