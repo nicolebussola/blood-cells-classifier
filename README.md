@@ -3,6 +3,7 @@
 # Blood cell classification
 
 </div>
+
 ##  Quickstart
 
 ```bash
@@ -18,12 +19,22 @@ conda activate myenv
 pip install -r requirements.txt
 ```
 
+Installing project as a package:
+```bash
+pip install -e .
+```
+
 ##  Workflow
 
 ### Data exploration and preparation
 Available annotations and dataset statistics can be explored using the notebook  `notebooks/data_exploration.ipynb`.
 
 Run `scripts/data_preparation.py` to crop cells from original images and create the training, validation, and test set stratified by cell type. The script requires the path of the folder containing original images and metadata to be passed as parameter.
+
+```bash
+python src/scripts/data_preparation -p downloaded/imgs/folder
+```
+
 
 ### Training
 Run training with default experiment config `configs/experiment/cell_classification.yaml`:
