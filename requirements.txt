@@ -19,6 +19,7 @@ scikit-learn
 pandas
 matplotlib
 tqdm
+notebook
 pillow
 pyrootutils     # standardizing the project root setup
 pre-commit      # hooks for applying linters on commit
