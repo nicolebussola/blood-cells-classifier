@@ -71,7 +71,7 @@ Notice that checkpoints of a given run are saved by default in `logs/train/runs/
 
 Performance on the test set can be visualized by running the `notebooks/visualize_test_predictions.ipynb` notebook. To replicate the results in the notebook use the provided checkpoints `ckpt_best.ckpt`.
 
-``bash
+```bash
 python src/eval.py ckpt_path=ckpt_best.ckpt
 ```
 
