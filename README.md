@@ -32,7 +32,7 @@ Available annotations and dataset statistics can be explored using the notebook 
 Run `scripts/data_preparation.py` to crop cells from original images and create the training, validation, and test set stratified by cell type. The script requires the path of the folder containing original images and metadata to be passed as parameter.
 
 ```bash
-python src/scripts/data_preparation -p downloaded/imgs/folder
+python src/scripts/data_preparation -p <data_source_path>
 ```
 
 
