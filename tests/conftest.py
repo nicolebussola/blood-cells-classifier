@@ -1,8 +1,13 @@
+import os
+from pathlib import Path
+
 import pyrootutils
 import pytest
 from hydra import compose, initialize
 from hydra.core.global_hydra import GlobalHydra
 from omegaconf import DictConfig, open_dict
+
+TEST_DIR = os.path.dirname(Path(__file__).absolute())
 
 
 @pytest.fixture(scope="package")
@@ -24,6 +29,17 @@ def cfg_train_global() -> DictConfig:
             cfg.extras.print_config = False
             cfg.extras.enforce_tags = False
             cfg.logger = None
+            cfg.trainer.limit_val_batches = 1
+            cfg.trainer.limit_train_batches = 1
+            cfg.trainer.limit_test_batches = 1
+            cfg.datamodule.train_data_dir = os.path.join(
+                TEST_DIR, "fixtures/train_cells"
+            )
+            cfg.datamodule.test_data_dir = os.path.join(TEST_DIR, "fixtures/test_cells")
+            cfg.datamodule.valid_data_dir = os.path.join(
+                TEST_DIR, "fixtures/valid_cells"
+            )
+            cfg.paths.data_dir = os.path.join(TEST_DIR, "fixtures")
 
     return cfg
 
@@ -47,6 +63,17 @@ def cfg_eval_global() -> DictConfig:
             cfg.extras.print_config = False
             cfg.extras.enforce_tags = False
             cfg.logger = None
+            cfg.trainer.limit_val_batches = 1
+            cfg.trainer.limit_train_batches = 1
+            cfg.trainer.limit_test_batches = 1
+            cfg.datamodule.train_data_dir = os.path.join(
+                TEST_DIR, "fixtures/train_cells"
+            )
+            cfg.datamodule.test_data_dir = os.path.join(TEST_DIR, "fixtures/test_cells")
+            cfg.datamodule.valid_data_dir = os.path.join(
+                TEST_DIR, "fixtures/valid_cells"
+            )
+            cfg.paths.data_dir = os.path.join(TEST_DIR, "fixtures")
 
     return cfg
 

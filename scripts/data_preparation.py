@@ -45,7 +45,7 @@ def main():
     df_cells_count = df_cells_count.fillna(0).reset_index()
     train_valid_df = df_cells_count.groupby(
         ["RBC", "Platelets", "WBC", "nan"], group_keys=False
-    ).apply(lambda x: x.sample(frac=0.6))
+    ).apply(lambda x: x.sample(frac=0.8))
     valid_images = list(
         train_valid_df.groupby(
             ["RBC", "Platelets", "WBC", "nan"], group_keys=False
