@@ -15,7 +15,6 @@ trainer:
   min_epochs: 1
   max_epochs: 30
   gradient_clip_val: 0.5
-  accelerator: "mps"
 
 model:
   optimizer:
