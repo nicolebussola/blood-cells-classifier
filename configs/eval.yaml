@@ -15,4 +15,4 @@ task_name: "eval"
 tags: ["dev"]
 
 # passing checkpoint path is necessary for evaluation
-ckpt_path: ${paths.root_dir}/logs/train/multiruns/2022-10-21_18-04-02/8/checkpoints/epoch_028.ckpt
+ckpt_path: ???

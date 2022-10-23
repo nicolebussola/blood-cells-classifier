@@ -62,9 +62,11 @@ python src/train.py logger=wandb hparams_search=blood_cells_optuna
 
 ### Testing
 
-Run model evaluation on the test set and save predictions:
+Run trained model on the test set and save predictions:
 ```bash
-python src/eval.py
+python src/eval.py ckpt_path=<path_to_checkpoint>
 ```
+
+Notice that checkpoints of a given run are saved in `logs/train/runs/<run_name>/checkpoints/<epoch>.ckpt>`.
 
 Performance on the test set can be visualized by running the `notebooks/visualize_test_predictions.ipynb` notebook
